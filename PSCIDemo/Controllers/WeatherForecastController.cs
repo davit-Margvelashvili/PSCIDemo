@@ -29,5 +29,11 @@ namespace PSCIDemo.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet(Name = "GetStatus")]
+        public IActionResult GetStatus()
+        {
+            return Ok();
+        }
     }
 }
