@@ -33,7 +33,7 @@ namespace PSCIDemo.Controllers
         [HttpGet(Name = "GetStatus")]
         public IActionResult GetStatus()
         {
-            return Ok();
+            return Ok("Running");
         }
     }
 }
