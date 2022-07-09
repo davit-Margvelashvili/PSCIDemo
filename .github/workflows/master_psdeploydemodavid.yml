@@ -7,13 +7,17 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
-
+  repository_dispatch:
+    types: [run_my_workflow]
+  
+  # workflow_dispatch:
+    
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
+      - run: echo "Payload field id ${{github.event.client_payload.mydata}}"
       - uses: actions/checkout@v2
 
       - name: Set up .NET Core
